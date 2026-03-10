@@ -1,1 +1,23 @@
+react in vscode
+1. go to vite official website and copy npm script i.e.: npm create vite@latest 
+2. open vscode create a new folder you can name it like anything
+3. then open new terminal and paste the npm scipt there 
+if comes error cannot be loaded because running scripts is disabled on this system then follow step4
+4. open powershell and type : Get-ExecutionPolicy and if it is restricted 
+   then type : Set-ExecutionPolicy Unrestricted
+   and even then error comes like  : Access to the registry key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell' is denied.
+   then open powershell as run as administrator
+   and then type: Set-ExecutionPolicy Unrestricted
+   then option will pop up so i typed A 
+   and now open vscode and in terminal type : npm create vite@latest
+5. after running npm create vite@latest in terminal
+   give permission to proceed
+   you can any name of project
+   then you will be asked for framework so selet react 
+   then choose a varient whichever you are suitable with i am with js
+6. you will see option to install npm and start now
+   but if not then type in termial: cd vite
+   then : npm install
+   then type : npm run dev    and then click on the localhost link and if it shows the react icon then you react is now ready
 
+note: so vite is not only way to install react there are many but as per now it is recommended to vite for react.
