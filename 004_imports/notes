@@ -1,1 +1,448 @@
+# React Imports
+----------------------------------------------------------------------------------
+1. Components
+                      ------------------------------------------------------------
+How to import:
+import Header from './Header'; // Default export
+import { Footer } from './Footer'; // Named export
 
+How to use:
+<Header />
+<Footer />
+
+-----------------------------------------------------------------------------------
+2. CSS File
+                       ------------------------------------------------------------
+import './App.css';
+
+-----------------------------------------------------------------------------------
+3. Images
+                       ------------------------------------------------------------
+How to import:
+import logo from './assets/logo.png';
+
+How to use:
+<img src={logo} alt="Logo" />
+
+-----------------------------------------------------------------------------------
+4. Modules / Functions / Utilities
+                       ------------------------------------------------------------
+import { formatDate } from './utils/helper';
+
+-----------------------------------------------------------------------------------
+5. JSON Files
+                       ------------------------------------------------------------
+import data from './data.json';
+
+-----------------------------------------------------------------------------------
+6. Third-party Packages (NPM Modules)
+                       ------------------------------------------------------------
+import axios from 'axios';
+import { BrowserRouter } from 'react-router-dom';
+
+-----------------------------------------------------------------------------------
+7. Hooks
+                       ------------------------------------------------------------
+import { useState, useEffect } from 'react';
+
+----------------------------------------------------------------------------------- 
+8. Fonts and Assets
+                       ------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+
+
+
+
+Import is used to bring functionality from another file or library into your current file.
+reacts apps are modular which means:
+    code is divided into multiple files
+    each file exports something
+    other files import and use it
+importance:
+   code resuability
+   clean project structure
+   separation of concerns
+   easy debugging and scalability
+
+
+
+
+
+
+------------------------------------------------------------
+2. BASIC IMPORT SYNTAX
+------------------------------------------------------------
+Syntax:
+import something from 'module-name';
+
+Example:
+import React from 'react';
+
+Explanation:
+- React → imported object
+- 'react' → library/package name
+- Gives access to JSX, components, hooks, etc.
+
+
+
+
+
+
+
+------------------------------------------------------------
+3. DEFAULT IMPORT
+------------------------------------------------------------
+Definition: Importing one main export from a file
+Syntax:
+import AnyName from './file';
+
+Example:
+import App from './App';
+
+Export side:
+export default App;
+
+Notes:
+- Name can be anything
+- Only one default export per file
+
+
+
+
+
+
+
+------------------------------------------------------------
+4. NAMED IMPORTS
+------------------------------------------------------------
+Definition: Importing specific multiple items from a file
+Syntax:
+import { name1, name2 } from './file';
+
+Example:
+import { useState, useEffect } from 'react';
+
+Notes:
+- Must use exact names
+- Can import multiple things
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+5. DIFFERENCE: DEFAULT vs NAMED IMPORT
+------------------------------------------------------------
+Default Import:
+- One per file
+- Flexible naming
+- No braces
+- Example: import App
+
+Named Import:
+- Multiple per file
+- Fixed naming
+- Uses {}
+- Example: import { useState }
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+6. MULTIPLE IMPORT TYPES TOGETHER
+------------------------------------------------------------
+Syntax:
+import React, { useState, useEffect } from 'react';
+
+Explanation:
+- React → default import
+- { useState, useEffect } → named imports
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+7. IMPORTING COMPONENTS
+------------------------------------------------------------
+Example:
+import Navbar from './components/Navbar';
+
+Explanation:
+- Importing custom component
+- Used for building UI structure
+- Important for component-based architecture
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+8. IMPORTING FILE TYPES
+------------------------------------------------------------
+CSS:
+import './App.css';
+
+Image:
+import logo from './logo.png';
+<img src={logo} />
+
+JSON:
+import data from './data.json';
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+9. IMPORTING FROM NODE MODULES
+------------------------------------------------------------
+Example:
+import axios from 'axios';
+
+Explanation:
+- Imports external packages installed via npm
+- Used for APIs, libraries, tools
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+10. RELATIVE vs ABSOLUTE PATHS
+------------------------------------------------------------
+Relative:
+import Header from './Header';
+
+Parent folder:
+import Header from '../Header';
+
+Absolute (advanced):
+import Header from 'components/Header';
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+11. IMPORT * (ALL IMPORTS)
+------------------------------------------------------------
+Syntax:
+import * as utils from './utils';
+
+Usage:
+utils.functionName();
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+12. EXPORT TYPES
+------------------------------------------------------------
+Named Export:
+export const name = "Nikesh";
+
+Default Export:
+export default App;
+
+Note: Import depends on how export is written
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+13. COMMON MISTAKES
+------------------------------------------------------------
+Wrong Named Import:
+import { usestate } from 'react'; ❌
+Correct: import { useState } from 'react';
+
+Mixing Default & Named Incorrectly:
+import { App } from './App'; ❌
+Correct: import App from './App';
+
+Wrong Path:
+import Navbar from 'Navbar'; ❌
+Correct: import Navbar from './Navbar';
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+14. REACT HOOK IMPORTS
+------------------------------------------------------------
+Example:
+import { useState, useEffect, useRef } from 'react';
+
+Purpose:
+- useState → state management
+- useEffect → side effects
+- useRef → DOM reference
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+15. BEST PRACTICES
+------------------------------------------------------------
+Clean Import Structure:
+- Libraries first
+- Hooks next
+- Components
+- Styles last
+
+Avoid unused imports:
+- Improves performance
+- Reduces clutter
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+16. REAL-WORLD FLOW
+------------------------------------------------------------
+React App Import Flow:
+1. Entry file (main.jsx)
+2. Imports App component
+3. App imports components, hooks, CSS
+4. Components import smaller components
+
+Result: Tree-like structure
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+17. CORE CONCEPT SUMMARY
+------------------------------------------------------------
+- React = modular architecture
+- Import/export = backbone
+- Two main types: Default, Named
+- Used for components, hooks, styles, data
+- Clean imports = professional code
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+FINAL UNDERSTANDING
+------------------------------------------------------------
+- React is a structured system of modules connected via imports
+- Without imports:
+  * No component reuse
+  * No scalability
+  * No maintainability
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+QUICK REVISION (CHEAT SHEET)
+------------------------------------------------------------
+Default import:
+import App from './App';
+
+Named import:
+import { useState } from 'react';
+
+Both together:
+import React, { useState } from 'react';
+
+CSS:
+import './App.css';
+
+Image:
+import logo from './logo.png';
+
+All import:
+import * as utils from './utils';
