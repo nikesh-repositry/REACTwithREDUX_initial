@@ -1,1 +1,74 @@
+BASIC MODULE OF COUNTER APP
+STEPS-
+first create a folder inside which you want to work
+then in vs code open that folder
+then in new terminal get inside the current folder
+then run= npm create vite@latest this command for essential files 
+then start your code
+//////////////////////////////////////////////////////////////////////////////////
+////////////////////////THIS IS MY TERMINAL STEPS FOR THSI COUNTER APP////////////
+//////////////////////////////////////////////////////////////////////////////////
+PS D:\000000000000000_CODE\react_initial> cd '.\002_M_COUNT                      00000000000_CODE\react_initial\002_M_COUNTERAPP> 
+PS D:\000000000000000_CODE\react_initial\002_M_COUNTERAPP> npm create vite@latest
+Need to install the following packages:
+create-vite@9.0.3
+Ok to proceed? (y) y
 
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  app
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Install with npm and start now?
+│  Yes
+│
+◇  Scaffolding project in D:\000000000000000_CODE\react_initial\002_M_COUNTERAPP\app...
+│
+◇  Installing dependencies with npm...
+
+added 151 packages, and audited 152 packages in 18s
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+│
+◇  Starting dev server...
+
+> app@0.0.0 dev
+> vite
+
+
+  VITE v8.0.1  ready in 961 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+npm run dev
+PS D:\000000000000000_CODE\react_initial\002_M_COUNTERAPP> cd app
+PS D:\000000000000000_CODE\react_initial\002_M_COUNTERAPP\app> npm run dev
+
+> app@0.0.0 dev
+> vite
+
+
+  VITE v8.0.1  ready in 393 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
