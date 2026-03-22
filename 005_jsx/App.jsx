@@ -1,3 +1,38 @@
+/*
+A) embedding expressions
+1)variables
+2)function calls
+3)ternary expressions
+4)mathematical operations
+
+B)jsx with inline styles
+1)jsx style is an object not a string
+
+C)conditional rendering in jsx
+1)using ternary operator
+2)using short circuit rendering
+
+D)jsx with loops(array)
+1)jsx does not support for but we can use .map()
+
+E)jsx is an expression
+1)assign it to variables
+2)pass as props 
+3)return from functions
+
+F)behind the scene
+1)compiled to react.createElement() behind the scenes
+
+G)jsx rules
+1)Must return a single parent element (use <div> or fragments <> </>).
+
+2)Use className instead of class, and htmlFor instead of for.
+
+3)Self‑closing tags for elements without children (<img />).
+
+4)No direct if-else — use ternary or logical &&.
+
+5)Only expressions allowed inside {} — not statements.*/
 import './App.css'
 
 // PRO TIP: This is a helper function to show "Function Calls" in JSX (Topic A2)
