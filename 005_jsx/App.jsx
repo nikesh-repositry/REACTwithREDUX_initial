@@ -132,5 +132,23 @@ function App() {
     </>
   );
 }
+/*
+The Fragment <> </> (Topic G1): React is like a strict parent. It refuses to accept more than one "child" at the top level. If you try to return two <div>s side-by-side, it crashes. The Fragment acts like an invisible box to hold them together.
+
+The Curly Braces { } (Topic A & G5): Think of these as a portal. Outside the braces, you are in HTML-land. Inside the braces, you are back in JavaScript-land. You can do math, call functions, or use variables. But you cannot write a full sentence like if (x) { ... }. You can only use pieces of code that "result" in a value (Expressions).
+
+The Double Braces {{ }} (Topic B1): People get confused here. The first { starts the JavaScript portal. The second { is just how you write an "Object" in JavaScript. It’s like saying: "Hey React, enter JS mode, and here is a Style Object for you."
+
+Why .map() and not for? (Topic D1): JSX needs to result in something it can draw on the screen. A for loop just "does" something but doesn't "give back" a value. .map() takes your list of names and "gives back" a list of <li> tags.
+
+className vs class (Topic G2): In regular JavaScript, the word class is used to create Blueprints for objects. Because JSX is technically JavaScript, if you used class="my-style", JavaScript would get confused and think you're trying to build a code class. So, React changed it to className.
+
+Behind the Scenes (Topic F1): When you see <h1>Hello</h1>, React doesn't actually see that. A program called Babel turns it into React.createElement('h1', null, 'Hello').
+
+(Pro Tips):
+
+The Key Prop: In the .map() section, I added key={index}. React needs a "ID card" for every item in a list so it can keep track of them.
+
+CamelCase for Styles: In CSS, you write background-color. In JSX styles, you must write backgroundColor. No dashes allowed!*/
 
 export default App;
