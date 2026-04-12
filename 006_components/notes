@@ -1,1 +1,62 @@
+/// COMPONENTS IN REACT*
+=DEFINITION
+react components are resuable, self-contained pieces of UI that manage their own logic,
+accept data through props and update efficiently using react virtual DOM
+example
+when you see any particular single item list like a shirt and then the list contains of many different shirt option with different price, description, photo but the structure, font, style is same of all . so here only one component is reused again and again
+
+=PURPOSE
+encalsulates logic + UI so it can be used across the app as much as required
+it also manage state of each component which means each components have different memory 
+
+
+
+
+
+
+=DO YOU WANT TO FEEL IT
+1. you attach an event handler to you jsx 
+   and then the component act as a listener which was already waiting for a signal to wake up
+
+2. when the user clicks you call something so this tell the react that the data inside the components is now different
+   the component act as a state manager. it holds onto its private memory(state) and update it. "useState" is used here 
+
+3. and now when the state has changed so react runs the component function again from top to bottom
+   the component acts as a blueprint. it looks at its new state and its current props and calculates what the UI should look like.
+
+4. so now instead of directly generating JSX into browser, react takes this JSX and creats a virtual DOM(a lightweight, fake version of website)
+   components act as a designer and based on new state it tells what new stuff need to be changed
+
+5. now react takes the new virtual dom and compares it to the old virtual dom and this is called diffing
+
+6. after step 5 react do react which means react finds out what stuffs are changed and it goes to the real dom(the actual website the user sees) and changes only that what need to be changed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
