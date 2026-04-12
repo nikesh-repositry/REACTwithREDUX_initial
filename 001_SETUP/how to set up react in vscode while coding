@@ -1,0 +1,44 @@
+PS D:\000000000000000_CODE\react_initial\005_components> npm create vite@latest     //here just open terminal inside the folder where you want to run react 
+Need to install the following packages:                                             //then follow instructions as mentioned below 
+create-vite@9.0.4
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  components
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Install with npm and start now?
+│  Yes
+│
+◇  Scaffolding project in D:\000000000000000_CODE\react_initial\005_components\components...
+│
+◇  Installing dependencies with npm...
+
+added 151 packages, and audited 152 packages in 28s
+
+36 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+│
+◇  Starting dev server...
+
+> components@0.0.0 dev
+> vite
+
+
+  VITE v8.0.8  ready in 760 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
