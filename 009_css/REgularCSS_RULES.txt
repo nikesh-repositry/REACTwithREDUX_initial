@@ -1,0 +1,53 @@
+REACT STYLING METHODS: STRUCTURED NOTES
+Source: STOP Using Regular CSS in React | #11 (School4U)
+
+1. REGULAR CSS (THE GLOBAL APPROACH)
+------------------------------------
+- How it works: You create a standard .css file and import it using "import './style.css'".
+- Code Example:
+  /* App.css */
+  .red-text { color: red; }
+
+  /* App.jsx */
+  import './App.css';
+  function App() {
+    return <h1 className="red-text">Hello World</h1>;
+  }
+- The Major De-merit: It is GLOBAL. If you define a class ".btn" in App.css, it will 
+  apply to every component in your entire app that uses className="btn", even if 
+  that component never imported App.css. This leads to style conflicts.
+
+2. CSS MODULES (THE COMPONENT-SCOPED APPROACH)
+----------------------------------------------
+- How it works: Rename your file to [name].module.css. React treats this as a 
+  JavaScript object where class names are keys.
+- File naming: Card.module.css
+- Code Example:
+  /* Card.module.css */
+  .cardContainer { background: blue; padding: 10px; }
+
+  /* Card.jsx */
+  import styles from './Card.module.css';
+  function Card() {
+    return <div className={styles.cardContainer}>I am scoped!</div>;
+  }
+- Why it's better: React generates unique class names (e.g., "Card_cardContainer__x1y2z") 
+  at runtime. This ensures that styles from this file NEVER leak into other components.
+
+3. INLINE STYLING (THE DYNAMIC APPROACH)
+----------------------------------------
+- How it works: Styles are passed as a JavaScript object directly to the "style" attribute.
+- Key Rule: Use camelCase instead of kebab-case (e.g., 'backgroundColor' not 'background-color').
+- Code Example:
+  function App() {
+    const customStyle = {
+      backgroundColor: 'yellow',
+      fontSize: '20px',
+      borderRadius: '5px'
+    };
+    return <button style={customStyle}>Click Me</button>;
+  }
+- Pros: Great for dynamic values (e.g., changing color based on state).
+- Cons: Harder to maintain for large styles; doesn't support pseudo-selectors like :hover.
+
+4. LOOKING AHEAD: TAILWIND CSS
