@@ -1,1 +1,88 @@
+Q.1 What is JSX?
+
+JSX is a special way of writing code in React. It looks like HTML but actually runs inside JavaScript.
+Think of it as a shortcut that lets you mix HTML-like tags with JavaScript logic. Many people say it
+stands for "JavaScript XML," but React’s official docs call it a "syntax extension for JavaScript."
+In simple words: JSX makes writing UI code easier and more readable, but under the hood it’s still
+JavaScript.
+
+---
+
+Q.2 Transpilation v/s Compilation
+
+Transpilation: This means converting code from one version of a language to another. For example,
+turning JSX into plain JavaScript, or ES6 (modern JS) into ES5 (older JS). It’s like translating
+English into simpler English so more people can understand.
+
+Compilation: This means converting human-readable code into machine-friendly code. For example,
+bundling and minifying your project so the browser can run it faster. It’s like turning a recipe
+into a ready-made dish.
+
+---
+
+Q.3 What is Babel?
+
+Babel is a tool (a transpiler) that takes modern JavaScript and JSX code and changes it into older
+JavaScript that all browsers can understand. Without Babel, many browsers would not know how to run
+new features. Think of Babel as a translator that makes sure your code works everywhere.
+
+---
+
+Q.4 What Happens with JSX behind the scene?
+
+1. Babel Transpiles JSX → React.createElement:
+   JSX is not real HTML. Babel converts it into React.createElement calls. This is just JavaScript
+   function calls that create virtual DOM elements.
+
+2. Babel Transpiles ES6+ → ES5:
+   If you use modern JS features (like arrow functions, async/await), Babel also converts them into
+   older JS for compatibility.
+
+3. Bundler Compilation (Webpack, Vite, etc.):
+   All the transpiled files are bundled into one optimized file. This step is closer to compilation
+   because it prepares your project for execution.
+
+4. Browser Execution:
+   React.createElement builds virtual DOM objects. React compares them (diffing) and updates only
+   the parts of the real DOM that changed. This makes React fast and efficient.
+
+---
+
+Q.5 Why we use double curly braces in style attribute?
+
+In JSX, inline styles are written as JavaScript objects, not strings. The first curly brace tells
+React: “I’m writing JavaScript inside JSX.” The second curly brace is the actual object with style
+properties. Example:
+
+<div style={{ color: "red", fontSize: "20px" }}></div>
+
+---
+
+Q.6 Why we need to use className, htmlFor instead of class and for in JSX?
+
+In JavaScript, “class” and “for” are reserved keywords. If JSX used them directly, it would cause
+errors. That’s why React uses alternatives:
+- className → replaces “class”
+- htmlFor → replaces “for”
+This avoids conflicts and makes JSX safe to compile.
+
+---
+
+Q.7 className is attribute or props in JSX?
+
+className looks like an HTML attribute because we write it inside tags. But JSX is just JavaScript.
+When Babel transpiles it, className becomes a prop passed to the React element. React then uses this
+prop to set the actual HTML “class” attribute in the DOM. So technically, className is a prop in JSX.
+
+---
+
+Q.8 JSX doesn’t support loop like “for”, but we can use “map”. Why?
+
+- “for” is a statement. It doesn’t return a value, so JSX can’t directly use it.
+- “map” is an expression. It returns an array of elements, which JSX can render.
+
+Example:
+{items.map(item => <li>{item}</li>)}
+
+This works because map produces values (elements) that React can display.
 
